@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mtv-Tu-yuN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nCU-In-8cZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Nmr-39-sBK">
+            <objects>
+                <navigationController id="nCU-In-8cZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="61y-H0-mgO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Mtv-Tu-yuN" kind="relationship" relationship="rootViewController" id="GiD-EQ-nbZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2wy-DR-JsS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1863" y="127"/>
+        </scene>
         <!--Refeicoes Table View Controller-->
         <scene sceneID="S3h-xY-OMN">
             <objects>
@@ -33,10 +49,17 @@
                             <outlet property="delegate" destination="Mtv-Tu-yuN" id="YM4-oi-yQ7"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="pW0-Ih-reU">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="4Ln-6R-Fuj">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="w62-un-EOL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rb-yc-uvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-766" y="134"/>
+            <point key="canvasLocation" x="-1010" y="126"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -100,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-84" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-49" y="126"/>
         </scene>
     </scenes>
 </document>
