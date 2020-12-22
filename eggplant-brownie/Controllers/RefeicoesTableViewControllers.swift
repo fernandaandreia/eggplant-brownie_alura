@@ -8,12 +8,11 @@
 
 import UIKit
 
-class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDelegate //implementar o protocolo
-{
+class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDelegate {
     
-    var refeicoes = [Refeicao(nome: "Macarrão", felicidade: 4),
-                     Refeicao(nome: "Pizza", felicidade: 4),
-                     Refeicao(nome: "Comida Japonesa", felicidade: 5)]
+    var refeicoes = [Refeicao(nome: "Macarrão", felicidade: 4, itens: []),
+                     Refeicao(nome: "Pizza", felicidade: 4, itens: []),
+                     Refeicao(nome: "Comida Japonesa", felicidade: 5, itens: [])]
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return refeicoes.count
