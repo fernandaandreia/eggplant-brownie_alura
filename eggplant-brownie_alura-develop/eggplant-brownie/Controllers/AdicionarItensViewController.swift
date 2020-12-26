@@ -10,12 +10,20 @@ import UIKit
 
 class AdicionarItensViewController: UIViewController {
 
+    
+    // MARK: - View life cycle - cuida do ciclo de vida
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
-
+// MARK: - IBAction - acao para o botao
  
-
+    @IBAction func adicionarItem(_ sender: Any) {
+        //navegar para proxima tela: navigationController.push()
+        //navegar para a tela anterior: navigationController.pop()
+        
+        navigationController?.popViewController(animated: true)
+    }
+    
 }
