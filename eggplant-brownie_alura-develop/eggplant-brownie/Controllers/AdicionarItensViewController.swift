@@ -54,7 +54,14 @@ class AdicionarItensViewController: UIViewController {
         if let numeroDeCalorias = Double(calorias) {
             let item = Item(nome: nome, calorias: numeroDeCalorias)
             
-            delegate?.add(item)
+//            if let delegate = delegate {
+//                delegate.add(item)
+//            } -> formas que podem ser utilizadas para substituir  o delegate?.add(item)
+          
+//            guard let delegate = delegate else { return }
+//            delegate.add(item)
+            
+             delegate?.add(item)
             
             navigationController?.popViewController(animated: true)
         }
