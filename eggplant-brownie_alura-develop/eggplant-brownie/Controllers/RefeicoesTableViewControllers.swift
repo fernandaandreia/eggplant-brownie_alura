@@ -14,6 +14,8 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
                      Refeicao(nome: "Pizza", felicidade: 4, itens: []),
                      Refeicao(nome: "Comida Japonesa", felicidade: 5, itens: [])]
     
+//    var refeicaoSelecionada: Refeicao?
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return refeicoes.count
     }
@@ -23,7 +25,6 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
         let celula = UITableViewCell(style: .default, reuseIdentifier: nil)
         let refeicao = refeicoes[indexPath.row]
         celula.textLabel?.text = refeicao.nome
-        
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(mostrarDetalhes(_:))) //gesto longo
         
         celula.addGestureRecognizer(longPress)
@@ -45,8 +46,11 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
             guard let indexPath = tableView.indexPath(for: celula)else { return }
         
             let refeicao = refeicoes[indexPath.row]
+//            refeicaoSelecionada = refeicao
             
-//            print("Refeicao: \(refeicao.nome)")
+            func removeRefeicao(alerta: UIAlertAction) {
+                print("Remover refeicao: \(refeicao.nome)")
+            }
             
             
          let alerta = UIAlertController(title: refeicao.nome, message: refeicao.detalhes(), preferredStyle: .alert)
@@ -63,10 +67,7 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
         
     }
     
-    func removeRefeicao(alerta: UIAlertAction) {
-        print("Remover refeicao")
-    }
-    
+   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let viewController = segue.destination as? ViewController {
             viewController.delegate = self
