@@ -131,7 +131,5 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         } else {
             Alerta(controller: self).exibe(mensagem: "Erro ao ler dados do formulário")
         }
-       
-        
     }
 }
