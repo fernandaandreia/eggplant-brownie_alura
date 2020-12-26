@@ -73,7 +73,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //                for itemSelecionado in itensSelecionados {
 //
 //                    print(itemSelecionado.nome)
-//                }
+//                } //teste para ver se a delecao esta funcionando
             }
         }
     }
