@@ -12,6 +12,7 @@
 		AB49D3D32597803E0070E974 /* AdicionarItensViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB49D3D12597803E0070E974 /* AdicionarItensViewController.xib */; };
 		AB49D3D52597C8D90070E974 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB49D3D42597C8D90070E974 /* Alerta.swift */; };
 		AB722550259933B700E401B1 /* RefeicaoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72254F259933B700E401B1 /* RefeicaoDao.swift */; };
+		AB72255225993E6E00E401B1 /* ItemDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72255125993E6E00E401B1 /* ItemDao.swift */; };
 		AB79C3AC258BBF9F0057FF3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB79C3AB258BBF9F0057FF3F /* AppDelegate.swift */; };
 		AB79C3AE258BBF9F0057FF3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB79C3AD258BBF9F0057FF3F /* ViewController.swift */; };
 		AB79C3B1258BBF9F0057FF3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB79C3AF258BBF9F0057FF3F /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		AB49D3D12597803E0070E974 /* AdicionarItensViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdicionarItensViewController.xib; sourceTree = "<group>"; };
 		AB49D3D42597C8D90070E974 /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
 		AB72254F259933B700E401B1 /* RefeicaoDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicaoDao.swift; sourceTree = "<group>"; };
+		AB72255125993E6E00E401B1 /* ItemDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDao.swift; sourceTree = "<group>"; };
 		AB79C3A8258BBF9F0057FF3F /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB79C3AB258BBF9F0057FF3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB79C3AD258BBF9F0057FF3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				ABF81EA225911BD400505CA2 /* Refeicao.swift */,
 				AB49D3D42597C8D90070E974 /* Alerta.swift */,
 				AB72254F259933B700E401B1 /* RefeicaoDao.swift */,
+				AB72255125993E6E00E401B1 /* ItemDao.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				AB49D3D22597803E0070E974 /* AdicionarItensViewController.swift in Sources */,
 				AB722550259933B700E401B1 /* RefeicaoDao.swift in Sources */,
 				AB79C3AE258BBF9F0057FF3F /* ViewController.swift in Sources */,
+				AB72255225993E6E00E401B1 /* ItemDao.swift in Sources */,
 				ABF81EA325911BD400505CA2 /* Refeicao.swift in Sources */,
 				AB79C3AC258BBF9F0057FF3F /* AppDelegate.swift in Sources */,
 				ABF81EE6259151DF00505CA2 /* RefeicoesTableViewControllers.swift in Sources */,
