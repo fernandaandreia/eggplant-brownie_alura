@@ -15,8 +15,7 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
                      Refeicao(nome: "Comida Japonesa", felicidade: 5, itens: [])]
     
     override func viewDidLoad() {
-        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else{ return }
-        let caminho = diretorio.appendingPathComponent("refeicao")
+        guard let caminho = recuperaCaminho() else { return }
         
         do {
              let dados = try Data(contentsOf: caminho)
@@ -51,8 +50,7 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
         refeicoes.append(refeicao)
         tableView.reloadData()
         
-        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else{ return }
-        let caminho = diretorio.appendingPathComponent("refeicao")
+        guard let caminho = recuperaCaminho() else { return }
         
         do {
             let dados = try NSKeyedArchiver.archivedData(withRootObject: refeicoes, requiringSecureCoding: false)
@@ -62,6 +60,13 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
         } //implementacao para salvar as info
         
         
+    }
+    
+    func recuperaCaminho() -> URL? {
+        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil}
+        
+        let caminho = diretorio.appendingPathComponent("refeicao")
+        return diretorio
     }
     
     @objc func mostrarDetalhes(_ gesture: UILongPressGestureRecognizer){
