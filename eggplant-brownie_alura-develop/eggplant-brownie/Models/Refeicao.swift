@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Refeicao: NSObject {
+class Refeicao: NSObject, NSCoding {
    
 //Atributos
         let nome: String
@@ -21,7 +21,21 @@ class Refeicao: NSObject {
             self.felicidade = felicidade
             self.itens = itens
         }
-        
+    
+  // MARK - NSCoding
+    //Serializacao
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(nome, forKey: "nome")
+        aCoder.encode(felicidade, forKey: "felicidade")
+        aCoder.encode(itens, forKey: "itens")
+    }
+    
+    //Desserializacao
+    required init?(coder aDecoder: NSCoder) {
+        <#code#>
+    }
+    
+    
 // Métodos para calcular a caloria
 //verificar onde está a informacao onde quero calcular
         func totalDeCalorias () -> Double{
