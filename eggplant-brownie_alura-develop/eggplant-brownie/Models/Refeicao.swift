@@ -32,7 +32,9 @@ class Refeicao: NSObject, NSCoding {
     
     //Desserializacao
     required init?(coder aDecoder: NSCoder) {
-        <#code#>
+        nome = aDecoder.decodeObject(forKey: "nome") as! String //Casting porque o objeto é 'Any?'
+        felicidade = aDecoder.decodeInteger (forKey: "felicidade")
+        itens = aDecoder.decodeObject(forKey: "itens") as! Array<Item>
     }
     
     
